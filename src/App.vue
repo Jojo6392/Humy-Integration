@@ -84,6 +84,11 @@
                     {{ item.text }}
                     <img src="./assets/arrow_footer.png" alt="arrow">
                 </div>
+
+                <img class="star"
+                    v-for="i in 3" :key="i"
+                    src="./assets/Star.png" alt="star"
+                >
             </div>
         </div>
     </div>
@@ -123,16 +128,21 @@ export default {
                 },
             ],
             x: 0,
+            mounted: false,
         }
+    },
+
+    mounted () {
+        this.mounted = true
     },
 
     computed: {
         barX() {
-            const bigBarElement = document.querySelector('.bigBar')
-            const bigBarWidth = bigBarElement.offsetWidth
+            // Besoin de check si c'est monté car on ne peut pas lire dans le DOM sinon.
+            if(!this.mounted) return
 
-            const barElement = document.querySelector('.bar')
-            const barWidth = barElement.offsetWidth
+            const bigBarWidth = document.querySelector('.bigBar').offsetWidth;
+            const barWidth = document.querySelector('.bar').offsetWidth;
 
             if(this.x < (bigBarWidth / 2)) return `transform: translate(0%, -50%)`
             else if (this.x > (barWidth - bigBarWidth / 2)) return `transform: translate(${(barWidth - bigBarWidth)}px, -50%)`
@@ -624,6 +634,7 @@ body {
         width: calc(74% - 80px);
         height: calc(100% - 80px);
         padding: 40px;
+        position: relative;
 
         display: flex;
         gap: 20px;
@@ -671,6 +682,28 @@ body {
 
             img {
                 align-self: flex-end;
+            }
+        }
+
+        .star {
+            position: absolute;
+
+            &:nth-of-type(1) {
+                right: 10px;
+                top: 24%;
+            }
+
+            &:nth-of-type(2) {
+                width: 31px;
+                height: 31px;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 10px;
+            }
+
+            &:nth-of-type(3) {
+                left: 25px;
+                top: 15px;
             }
         }
     }
