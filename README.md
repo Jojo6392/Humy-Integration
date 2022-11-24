@@ -6,4 +6,5 @@
 
 *Resolution : 1440x 1024 - no responsive*
 
-![humy_integration](https://user-images.githubusercontent.com/87821711/203823253-315b280c-8fa6-4836-9254-89819648f130.PNG)
+![humy_integration](https://user-images.githubusercontent.com/87821711/203832487-c6b0b28c-24e6-4169-9fc5-beb955d3e7c2.PNG)
+
