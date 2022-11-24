@@ -1,24 +1,9 @@
-# humy
+# Figma integration of Humy
 
-## Project setup
-```
-npm install
-```
+- Link to the dribble : https://dribbble.com/shots/19836318-HUMY-Property-Website designed by **Adin Yanuar**
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- Link to the work : https://jojo6392.github.io/Humy-Integration/
 
-### Compiles and minifies for production
-```
-npm run build
-```
+*Resolution : 1440x 1024 - no responsive*
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![humy_integration](https://user-images.githubusercontent.com/87821711/203823253-315b280c-8fa6-4836-9254-89819648f130.PNG)
